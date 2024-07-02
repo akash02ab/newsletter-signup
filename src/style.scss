@@ -18,17 +18,26 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  margin: 0 auto;
+  background-color: var(--charcoal);
+
+  @media screen and (min-width: 960px) {
+    padding: 128px;
+  }
 }
 
 .thankyou-modal {
   display: none;
 }
 
-#desktop-image {
-  display: none;
-}
 
 .container {
+  margin: 0 auto;
+
+  #desktop-image {
+    display: none;
+  }
+
   #mobile-image {
     width: 100%;
     object-fit: cover;
@@ -99,15 +108,39 @@ body {
       }
     }
   }
+
+  @media screen and (min-width: 768px) { 
+    max-width: 1260px;
+    padding: 32px;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+
+    #mobile-image { 
+      display: none;
+    }
+
+    #desktop-image {
+      display: block;
+    }
+  }
 }
 
 .attribution {
   width: 100%;
+  margin-top: 16px;
   text-align: center;
 
   p {
     font-size: 16px;
     font-weight: 400;
     color: var(--tomato);
+  }
+
+  a {
+    color: var(--white);
   }
 }

@@ -18,9 +18,19 @@ body {
   font-weight: 400;
   font-size: 16px;
   margin: 0 auto;
-  background-color: var(--charcoal);
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
+  body {
+    padding: 32px;
+    background-color: var(--charcoal);
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 64px;
+  }
+}
+@media screen and (min-width: 1440px) {
   body {
     padding: 128px;
   }
@@ -51,6 +61,11 @@ body {
   font-size: 40px;
   line-height: 1.25;
 }
+@media screen and (min-width: 1440px) {
+  .container .wrapper h1 {
+    font-size: 54px;
+  }
+}
 .container .wrapper ul {
   display: flex;
   flex-direction: column;
@@ -74,6 +89,7 @@ body {
   font-weight: 700;
 }
 .container .wrapper form label input {
+  max-width: 375px;
   outline: none;
   padding: 20px;
   margin-top: 12px;
@@ -81,6 +97,7 @@ body {
   border: 1px solid var(--grey);
 }
 .container .wrapper form button {
+  max-width: 375px;
   width: 100%;
   margin-top: 20px;
   padding: 20px;
@@ -100,7 +117,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 1260px;
+    max-width: 932px;
     padding: 32px;
     border-radius: 32px;
     display: flex;
@@ -113,7 +130,7 @@ body {
     display: none;
   }
   .container #desktop-image {
-    display: block;
+    display: inline;
   }
 }
 
@@ -127,6 +144,8 @@ body {
   font-weight: 400;
   color: var(--tomato);
 }
-.attribution a {
-  color: var(--white);
+@media screen and (min-width: 768px) {
+  .attribution a {
+    color: var(--white);
+  }
 }/*# sourceMappingURL=style.css.map */
